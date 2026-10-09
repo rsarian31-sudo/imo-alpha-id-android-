@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
         public void openImoSettings() {
             runOnUiThread(() -> {
                 try {
-                    Intent settings = new Intent(Intent.ACTION_APPLICATION_DETAILS_SETTINGS,
+                    Intent settings = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
                             Uri.parse("package:" + IMO_PACKAGE));
                     startActivity(settings);
                 } catch (Exception e) {
