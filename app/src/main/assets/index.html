@@ -1,29 +1,51 @@
 <!doctype html>
-<html lang="bn"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#090909"><title>IMO Alpha ID</title>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07110e">
+<title>IMO Alpha Privacy</title>
 <style>
-:root{--gold:#e7bd55;--line:#3b3019;--muted:#b9b0a0}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#29200e 0,#0b0b0b 42%,#050505 100%);color:#f8f3e8;font-family:system-ui,sans-serif;min-height:100vh}
-main{max-width:520px;margin:auto;padding:20px 15px 34px}.brand{text-align:center;padding:18px 8px 22px}.crown{font-size:34px;color:var(--gold)}h1{font-size:27px;letter-spacing:2px;margin:5px 0;color:var(--gold)}.sub{color:var(--muted);font-size:12px;letter-spacing:2px}
-.card{background:linear-gradient(145deg,#191919,#101010);border:1px solid var(--line);border-radius:18px;padding:17px;margin:12px 0;box-shadow:0 10px 30px #0008}h2{font-size:17px;margin:0 0 12px;color:var(--gold)}p{color:var(--muted);font-size:13px;line-height:1.55;margin:8px 0}
-label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}input{width:100%;border:1px solid #514324;background:#090909;color:#fff;border-radius:10px;padding:12px;font-size:16px}
-button{border:0;border-radius:11px;padding:12px 14px;font-weight:750;font-size:14px;cursor:pointer;width:100%;margin-top:9px}.primary{background:linear-gradient(110deg,#f3d67e,#b98520);color:#161006}.secondary{background:#252117;color:#f3d67e;border:1px solid #695321}.danger{background:#271515;color:#ffb5a8;border:1px solid #5b2924}.row{display:flex;gap:8px}.row>*{flex:1}.generated{font-size:30px;letter-spacing:4px;font-weight:800;text-align:center;color:var(--gold);padding:14px 0;overflow-wrap:anywhere}.status{font-size:12px;color:#c9b77f;min-height:18px;margin-top:8px}.saved{display:flex;align-items:center;gap:8px;padding:10px 0;border-top:1px solid #302817}.saved .info{flex:1;min-width:0}.saved strong{display:block;color:#f1d58c}.saved small{color:var(--muted);overflow-wrap:anywhere}.saved button{width:auto;margin:0;padding:8px 10px;font-size:12px}.pill{display:inline-block;border:1px solid #655020;border-radius:30px;padding:5px 10px;color:#e7c76d;font-size:11px;margin-top:9px}footer{text-align:center;color:#766d5d;font-size:11px;padding:15px 5px}
-</style></head><body><main>
-<header class="brand"><div class="crown">♛</div><h1>IMO ALPHA ID</h1><div class="sub">PERSONAL ROYAL EDITION</div><span class="pill">PRIVATE • ON THIS PHONE</span></header>
-<section class="card"><h2>♛ Create Your Alpha ID</h2><label for="nickname">তোমার নাম / Nickname</label><input id="nickname" maxlength="30" placeholder="যেমন: Alpha Wajid"><div class="generated" id="preview">••••••••</div>
-<div class="row"><button class="primary" id="generate">নতুন ৮ ডিজিট ID</button><button class="secondary" id="save">Save ID</button></div><div class="row"><button class="secondary" id="copy">Copy ID</button><button class="secondary" id="share">Share</button></div><div class="status" id="status"></div><p>এই ID শুধু এই অ্যাপের জন্য। এটি তোমার আসল IMO ID নয় এবং IMO-তে স্বয়ংক্রিয়ভাবে সেট হবে না।</p></section>
-<section class="card"><h2>🎙 Open IMO Voice Rooms</h2><p>বোতামে চাপলে ফোনে ইনস্টল করা আসল IMO অ্যাপ খোলার চেষ্টা করবে। এরপর IMO-তে গিয়ে নিজে পছন্দের লাইভ ভয়েস রুম/বোর্ড খুঁজে যোগ দাও।</p><button class="primary" id="open-imo">Open IMO App ↗</button><div class="status" id="imo-status"></div></section>
-<section class="card"><h2>🔎 Saved Alpha IDs</h2><label for="search">নাম বা ID দিয়ে খুঁজো</label><input id="search" placeholder="Search saved IDs"><div id="saved-list"><p>এখনও কোনো ID সেভ করা হয়নি।</p></div><button class="danger" id="clear">সব সেভ করা ID মুছে দাও</button></section>
-<footer>Independent personal companion app; not an official IMO product. Voice-room access follows IMO's app and rules.</footer></main>
+:root{--bg:#07110e;--panel:#101c17;--line:#244c3a;--green:#6ee7a8;--green2:#1f9d63;--text:#effcf4;--muted:#a6c1b1;--warn:#ffd48a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#123525 0,#07110e 46%,#040806 100%);color:var(--text);font-family:system-ui,-apple-system,sans-serif;min-height:100vh}
+main{max-width:540px;margin:auto;padding:18px 15px 32px}.brand{text-align:center;padding:20px 8px 18px}.logo{width:70px;height:70px;border:1px solid #347c59;border-radius:23px;margin:0 auto 12px;display:grid;place-items:center;background:linear-gradient(145deg,#163b29,#09160f);color:var(--green);font-size:35px;box-shadow:0 8px 30px #0007}h1{font-size:25px;letter-spacing:1px;margin:5px 0;color:var(--green)}.sub{font-size:12px;color:var(--muted);letter-spacing:1.5px}.pill{display:inline-block;border:1px solid #2c6649;border-radius:30px;padding:6px 10px;color:var(--green);font-size:11px;margin-top:12px}
+.card{background:linear-gradient(145deg,#122219,#0d1712);border:1px solid var(--line);border-radius:18px;padding:17px;margin:12px 0;box-shadow:0 10px 28px #0005}h2{font-size:17px;margin:0 0 9px;color:var(--green)}p{font-size:13px;line-height:1.65;color:var(--muted);margin:8px 0}.btn{display:block;width:100%;border:0;border-radius:12px;padding:14px 12px;font-size:14px;font-weight:750;margin-top:10px;cursor:pointer}.primary{background:linear-gradient(110deg,#83f0b1,#35bd7c);color:#052012}.secondary{background:#172c20;color:#c5f9d9;border:1px solid #326b4a}.small{font-size:12px;font-weight:600;padding:11px}.item{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-top:1px solid #20392a}.item:first-of-type{border-top:0}.check{color:var(--green);font-size:18px}.item div{flex:1}.item strong{font-size:14px}.item p{margin:3px 0 0}.notice{border-left:3px solid var(--warn);padding:8px 0 8px 11px;color:#e7d2a8;font-size:12px;line-height:1.6;margin-top:10px}.status{font-size:12px;color:var(--green);min-height:18px;margin-top:8px}footer{text-align:center;color:#6d8c79;font-size:11px;line-height:1.6;padding:15px 6px}
+</style>
+</head>
+<body><main>
+<header class="brand"><div class="logo">A</div><h1>IMO ALPHA</h1><div class="sub">PRIVACY COMPANION</div><span class="pill">OFFLINE • NO ACCOUNT DATA STORED HERE</span></header>
+<section class="card">
+<h2>📞 Open official IMO</h2>
+<p>কল করা, কল রিসিভ করা এবং Voice Room-এ যোগ দেওয়ার জন্য ফোনে ইনস্টল করা আসল IMO ব্যবহার করো। Alpha এই অ্যাপের বিকল্প নয় এবং IMO-এর সার্ভার বা অ্যাকাউন্ট পরিবর্তন করে না।</p>
+<button class="btn primary" onclick="openImo()">Open IMO App ↗</button>
+<div id="imoStatus" class="status" aria-live="polite"></div>
+</section>
+<section class="card">
+<h2>🔒 Privacy quick settings</h2>
+<p>নিচের বোতাম দিয়ে অফিসিয়াল IMO-এর Android সেটিংসে যাও। প্রয়োজন নেই এমন অনুমতি বন্ধ করতে পারো।</p>
+<button class="btn secondary" onclick="openSettings()">Open IMO App Settings</button>
+<button class="btn secondary" onclick="openPermissionGuide()">How to limit permissions</button>
+<div id="settingsStatus" class="status" aria-live="polite"></div>
+</section>
+<section class="card">
+<h2>🛡️ নতুন অ্যাকাউন্টের নিরাপত্তা চেকলিস্ট</h2>
+<div class="item"><span class="check">✓</span><div><strong>নিজের নিয়ন্ত্রণে থাকা নতুন নম্বর</strong><p>OTP গ্রহণ করতে পারবে এমন নম্বর ব্যবহার করো। ভাড়া বা অস্থায়ী SMS নম্বর এড়িয়ে চলো।</p></div></div>
+<div class="item"><span class="check">✓</span><div><strong>Contacts অনুমতি সীমিত রাখো</strong><p>Android Settings → Apps → imo → Permissions → Contacts → Don't allow। কিছু পরিচিতি খোঁজার সুবিধা সীমিত হতে পারে।</p></div></div>
+<div class="item"><span class="check">✓</span><div><strong>প্রোফাইলে কম তথ্য দাও</strong><p>নিজের আসল নাম, ব্যক্তিগত ছবি বা অপ্রয়োজনীয় তথ্য প্রকাশ না করলেও অ্যাকাউন্টের কিছু তথ্য IMO-এর কাছে যাবে।</p></div></div>
+<div class="item"><span class="check">✓</span><div><strong>Microphone অনুমতি শুধু IMO-তে</strong><p>কল ও Voice Room-এর জন্য IMO-এর মাইক্রোফোন অনুমতি প্রয়োজন হতে পারে। এই Alpha অ্যাপ নিজে মাইক্রোফোন ব্যবহার করে না।</p></div></div>
+<div class="notice">গুরুত্বপূর্ণ: এই companion অ্যাপ নিজে কোনো অ্যাকাউন্ট তৈরি করে না এবং IMO-র কাছে তথ্য যাওয়া বন্ধ করতে পারে না। Modified APK-এর মাধ্যমে এই নিশ্চয়তা দেওয়া সম্ভব নয়।</div>
+</section>
+<section class="card">
+<h2>📱 পুরোনো IMO নিরাপদ রাখো</h2>
+<p>পুরোনো অ্যাপ আনইনস্টল বা তার ডেটা ক্লিয়ার করো না। নতুন অ্যাকাউন্টের জন্য Android-এর Dual Messenger (যদি IMO সমর্থিত হয়) অথবা আলাদা অ্যাপ ইনস্টল ব্যবহার করো। একই অ্যাপের কপি পাওয়া না গেলে পুরোনো অ্যাকাউন্ট থেকে লগআউট করার আগে অ্যাকাউন্ট পুনরুদ্ধারের তথ্য নিশ্চিত করো।</p>
+<button class="btn secondary" onclick="openDualGuide()">Samsung Dual Messenger guide</button>
+</section>
+<footer>IMO Alpha Privacy is an independent companion app, not an official IMO product. It requests no contacts, microphone, location, or internet permission. It cannot create IMO accounts or unlock server-side features.</footer>
+</main>
 <script>
-const $=id=>document.getElementById(id),KEY="imoAlphaSavedV1";let current="";
-function load(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return []}}
-function store(a){localStorage.setItem(KEY,JSON.stringify(a));render()}
-function msg(t){$("status").textContent=t}
-function gen(){const ids=new Set(load().map(x=>x.id));let n;do{n=String(Math.floor(10000000+Math.random()*90000000))}while(ids.has(n));current=n;$("preview").textContent=current;msg("নতুন ID তৈরি হয়েছে। চাইলে Save ID চাপো।")}
-function copyText(t){try{const ta=document.createElement("textarea");ta.value=t;document.body.append(ta);ta.select();document.execCommand("copy");ta.remove();msg("ID কপি হয়েছে: "+t)}catch(e){msg("ID: "+t)}}
-function render(){const q=$("search").value.trim().toLowerCase(),all=load(),arr=all.filter(x=>(x.name+" "+x.id).toLowerCase().includes(q)),el=$("saved-list");el.innerHTML="";if(!arr.length){el.innerHTML="<p>"+(all.length?"কোনো মিল পাওয়া যায়নি।":"এখনও কোনো ID সেভ করা হয়নি।")+"</p>";return}arr.forEach(x=>{const d=document.createElement("div");d.className="saved";const info=document.createElement("div");info.className="info";const strong=document.createElement("strong");strong.textContent=x.id;const small=document.createElement("small");small.textContent=x.name||"Unnamed Alpha";info.append(strong,small);const c=document.createElement("button");c.className="secondary";c.textContent="Copy";c.onclick=()=>copyText(x.id);const del=document.createElement("button");del.className="danger";del.textContent="×";del.onclick=()=>store(load().filter(y=>y.id!==x.id));d.append(info,c,del);el.append(d)})}
-$("generate").onclick=gen;$("save").onclick=()=>{if(!current)gen();const a=load();if(a.some(x=>x.id===current)){msg("এই ID আগেই সেভ করা আছে।");return}a.unshift({id:current,name:$("nickname").value.trim()});store(a);msg("ID এই ফোনে সেভ হয়েছে।")};$("copy").onclick=()=>current?copyText(current):msg("আগে ID তৈরি করো।");$("share").onclick=()=>{const s=($("nickname").value.trim()||"My Alpha ID")+" — "+(current||"");if(navigator.share)navigator.share({title:"My Alpha ID",text:s}).catch(()=>{});else copyText(s)};$("search").addEventListener("input",render);$("clear").onclick=()=>{if(confirm("এই ফোনে সেভ করা সব ID মুছে ফেলবে?")){localStorage.removeItem(KEY);render();msg("সব ID মুছে ফেলা হয়েছে।")}};
-$("open-imo").onclick=()=>{$("imo-status").textContent="IMO অ্যাপ খোলার চেষ্টা হচ্ছে…";location.href="intent://#Intent;package=com.imo.android.imoim;scheme=imo;end";setTimeout(()=>{$("imo-status").textContent="না খুললে Play Store থেকে অফিসিয়াল IMO ইনস্টল/আপডেট করো।"},1800)};gen();render();
-</script></body></html>
+function openImo(){if(window.AlphaAndroid){window.AlphaAndroid.openImo()}else{document.getElementById('imoStatus').textContent='ফোনের IMO অ্যাপ খুলতে Android সংস্করণ প্রয়োজন।'}}
+function openSettings(){if(window.AlphaAndroid){window.AlphaAndroid.openImoSettings()}else{document.getElementById('settingsStatus').textContent='ফোনের সেটিংস খুলতে Android সংস্করণ প্রয়োজন।'}}
+function openPermissionGuide(){document.getElementById('settingsStatus').textContent='Settings → Apps → imo → Permissions থেকে Contacts বন্ধ রাখো। কল/Voice Room-এর জন্য Microphone অনুমতি চালু লাগতে পারে।';}
+function openDualGuide(){document.getElementById('settingsStatus').textContent='Samsung Settings → Advanced features → Dual Messenger। IMO তালিকায় থাকলে চালু করো। না থাকলে এটি তোমার ফোনে সমর্থিত নাও হতে পারে।';}
+</script>
+</body></html>
